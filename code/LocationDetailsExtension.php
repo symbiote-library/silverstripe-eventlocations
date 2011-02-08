@@ -2,7 +2,7 @@
 /**
  * Adds the location address and a map to the event details page.
  *
- * @package silverstripe-eventmanagement-locations
+ * @package silverstripe-eventlocations
  */
 class LocationDetailsExtension extends Extension {
 

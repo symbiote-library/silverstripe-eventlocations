@@ -2,7 +2,7 @@
 /**
  * Adds the fields to select a location for an event datetime.
  *
- * @package silverstripe-eventmanagement-locations
+ * @package silverstripe-eventlocations
  */
 class LocationDateTimeExtension extends DataObjectDecorator {
 
@@ -41,8 +41,8 @@ class LocationDateTimeExtension extends DataObjectDecorator {
 	public function getPopupRequirements() {
 		Requirements::javascript(THIRDPARTY_DIR . '/jquery/jquery.js');
 		Requirements::javascript(THIRDPARTY_DIR . '/jquery-metadata/jquery.metadata.js');
-		Requirements::add_i18n_javascript('eventmanagement/locations/javascript/lang');
-		Requirements::javascript('eventmanagement-locations/javascript/LocationDateTimeCms.js');
+		Requirements::add_i18n_javascript('eventlocations/javascript/lang');
+		Requirements::javascript('eventlocations/javascript/LocationDateTimeCms.js');
 	}
 
 }

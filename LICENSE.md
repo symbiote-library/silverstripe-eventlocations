@@ -1,4 +1,4 @@
-# SilverStripe Event Management Locations
+# SilverStripe Event Locations Module
 
 Copyright &copy; 2011, SilverStripe Australia PTY LTD - www.silverstripe.com.au
 All rights reserved.

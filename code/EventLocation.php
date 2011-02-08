@@ -3,7 +3,7 @@
  * An event location is an address where an event can be held, and also pulls
  * in capacity information to a calendar date time object.
  *
- * @package silverstripe-eventmanagement
+ * @package silverstripe-eventlocations
  */
 class EventLocation extends DataObject {
 

@@ -2,7 +2,7 @@
 /**
  * Allows administrators to manage available event locations.
  *
- * @package eventmanagement-locations
+ * @package silverstripe-eventlocations
  */
 class EventLocationAdmin extends ModelAdmin {
 
