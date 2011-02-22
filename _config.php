@@ -8,5 +8,5 @@ if (!class_exists('Addressable')) {
 }
 
 
-Object::add_extension('RegisterableDateTime', 'LocationDateTimeExtension');
+Object::add_extension('CalendarDateTime', 'LocationDateTimeExtension');
 Object::add_extension('EventTimeDetailsController', 'LocationDetailsExtension');
