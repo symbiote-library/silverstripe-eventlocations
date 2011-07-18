@@ -26,4 +26,38 @@ class EventLocation extends DataObject {
 		'Title'
 	);
 
+	
+	/**
+	 * @param Member $member
+	 * @return boolean
+	 */
+	public function canView($member = null) {
+		return Permission::check('CMS_ACCESS_EventLocationAdmin', 'any', $member);
+	}
+
+	/**
+	 * @param Member $member
+	 * @return boolean
+	 */
+	public function canEdit($member = null) {
+		return Permission::check('CMS_ACCESS_EventLocationAdmin', 'any', $member);
+	}
+
+	/**
+	 * @param Member $member
+	 * @return boolean
+	 */
+	public function canDelete($member = null) {
+		return Permission::check('CMS_ACCESS_EventLocationAdmin', 'any', $member);
+	}
+
+	/**
+	 * @todo Should canCreate be a static method?
+	 *
+	 * @param Member $member
+	 * @return boolean
+	 */
+	public function canCreate($member = null) {
+		return Permission::check('CMS_ACCESS_EventLocationAdmin', 'any', $member);
+	}
 }
