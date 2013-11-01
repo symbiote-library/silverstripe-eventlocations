@@ -4,45 +4,43 @@
  *
  * @package silverstripe-eventlocations
  */
-class LocationDateTimeExtension extends DataObjectDecorator {
+class LocationDateTimeExtension extends DataExtension {
 
-	public function extraStatics() {
-		return array('has_one' => array(
-			'Location' => 'EventLocation'
-		));
-	}
+	private static $has_one = array(
+		'Location' => 'EventLocation'
+	);
 
-	public function updateDateTimeCMSFields($fields) {
-		if (!$locations = DataObject::get('EventLocation')) {
-			return;
-		}
+	public function updateCMSFields(FieldList $fields) {
+		
+		$locations = function(){
+			return EventLocation::get()->map()->toArray();
+		};
 
-		$capacities = array();
-		foreach ($locations as $location) {
-			if ($location->Capacity) {
-				$capacities[$location->ID] = (int) $location->Capacity;
-			}
-		}
-
-		$dropdown = new DropdownField(
+		$dropdown = DropdownField::create(
 			'LocationID',
 			_t('EventLocations.LOCATION', 'Location'),
-			$locations->map('ID', 'Title'),
-			null, null, true);
-		$dropdown->addExtraClass('{ capacities: ' . Convert::array2json($capacities) . ' }');
+			$locations()
+		)->setHasEmptyDefault(true);
 
-		$fields->addFieldToTab('Root.Main', $dropdown, 'StartDate');
-	}
+		if(class_exists('QuickAddNewExtension')){
+			$dropdown->useAddNew('EventLocation', $locations);
+		}
 
-	public function updateDateTimeTable($table) {
-		$table->requirementsForPopupCallback = array($this, 'getPopupRequirements');
-	}
+		
+		if($this->owner->hasField('Capacity')){
+			Requirements::javascript(THIRDPARTY_DIR . '/jquery-metadata/jquery.metadata.js');
+			Requirements::add_i18n_javascript('eventlocations/javascript/lang');
+			Requirements::javascript('eventlocations/javascript/LocationDateTimeCms.js');
 
-	public function getPopupRequirements() {
-		Requirements::javascript(THIRDPARTY_DIR . '/jquery/jquery.js');
-		Requirements::javascript(THIRDPARTY_DIR . '/jquery-metadata/jquery.metadata.js');
-		Requirements::add_i18n_javascript('eventlocations/javascript/lang');
-		Requirements::javascript('eventlocations/javascript/LocationDateTimeCms.js');
+			$capacities = array();
+			foreach ($locations as $location) {
+				if ($location->Capacity) {
+					$capacities[$location->ID] = (int) $location->Capacity;
+				}
+			}
+			$dropdown->addExtraClass('{ capacities: ' . Convert::array2json($capacities) . ' }');
+		}
+		$fields->insertBefore($dropdown, 'StartDate');
 	}
 
 }

@@ -7,24 +7,42 @@
  */
 class EventLocation extends DataObject {
 
-	public static $db = array(
+	private static $db = array(
 		'Title'    => 'Varchar(255)',
 		'Capacity' => 'Int'
 	);
 
-	public static $extensions = array(
+	private static $extensions = array(
 		'Addressable'
 	);
 
-	public static $summary_fields = array(
+	private static $summary_fields = array(
 		'Title'       => 'Title',
 		'Capacity'    => 'Capacity',
 		'FullAddress' => 'Address'
 	);
 
-	public static $searchable_fields = array(
+	private static $searchable_fields = array(
 		'Title'
 	);
+
+	public function getCMSFields(){
+		$fields = parent::getCMSFields();
+
+		if(!class_exists('EventRegistration')){
+			$fields->removeByName('Capacity');
+		}
+		
+		return $fields;
+	}
+
+	public function summaryFields(){
+		$fields = parent::summaryFields();
+		if(!class_exists('EventRegistration')){
+			unset($fields['Capacity']);
+		}
+		return $fields;
+	}
 
 	
 	/**
