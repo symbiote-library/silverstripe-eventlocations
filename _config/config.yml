@@ -1,0 +1,3 @@
+CalendarDateTime:
+  extensions:
+    - LocationDateTimeExtension
