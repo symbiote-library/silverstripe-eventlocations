@@ -4,7 +4,7 @@ This module adds the ability to define locations where events can be held in the
 CMS, and then select one to associate with a specific date and time. This adds an address and map to the details page.
 
 ## Maintainer Contacts
-*  Andrew Short (<andrew@silverstripe.com.au>)
+*  Marcus Nyeholt (<marcus@silverstripe.com.au>)
 
 ## Requirements
 *  SilverStripe 3+
