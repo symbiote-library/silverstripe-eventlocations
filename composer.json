@@ -1,0 +1,28 @@
+{
+	"name": "silverstripe-australia/silverstripe-eventlocations",
+	"description": "An extension to the Event Management module that lets you attach a location to an event.",
+	"type": "silverstripe-module",
+	"keywords": [
+		"silverstripe",
+		"event",
+		"location",
+		"calendar"
+	],
+	"homepage": "https://github.com/silverstripe-australia/silverstripe-eventlocations",
+	"license": "BSD-3-Clause",
+	"authors": [{
+		"name": "Andrew Short",
+		"email": "ajshort@silverstripe.com.au"
+	}],
+	"require": {
+		"silverstripe/cms": "3.1.*",
+		"silverstripe/framework": "3.1.*",
+		"silverstripe-australia/eventmanagement": "~1.0"
+	},
+	"extra": {
+		"installer-name": "extensible-search",
+		"branch-alias": {
+			"dev-master": "1.0.x-dev"
+		}
+	}
+}
