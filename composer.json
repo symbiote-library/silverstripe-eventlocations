@@ -20,7 +20,7 @@
 		"silverstripe-australia/eventmanagement": "~1.1"
 	},
 	"extra": {
-		"installer-name": "extensible-search",
+		"installer-name": "eventlocations",
 		"branch-alias": {
 			"dev-master": "1.0.x-dev"
 		}
