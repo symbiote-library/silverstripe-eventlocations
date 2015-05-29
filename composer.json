@@ -17,7 +17,8 @@
 	"require": {
 		"silverstripe/cms": "3.1.*",
 		"silverstripe/framework": "3.1.*",
-		"silverstripe-australia/eventmanagement": "~1.1"
+		"silverstripe-australia/eventmanagement": "~1.1",
+		"silverstripe-australia/addressable": "~1.0"
 	},
 	"extra": {
 		"installer-name": "eventlocations",
