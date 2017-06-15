@@ -1,3 +1,7 @@
+> ## **IMPORTANT**
+
+> This module is no longer actively maintained, however, if you're interested in adopting it, please let us know!
+
 # SilverStripe Event Locations Module
 
 This module adds the ability to define locations where events can be held in the
