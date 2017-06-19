@@ -1,5 +1,5 @@
 {
-	"name": "silverstripe-australia/silverstripe-eventlocations",
+	"name": "symbiote-library/silverstripe-eventlocations",
 	"description": "An extension to the Event Management module that lets you attach a location to an event.",
 	"type": "silverstripe-module",
 	"keywords": [
@@ -24,7 +24,7 @@
 	"extra": {
 		"installer-name": "eventlocations",
 		"branch-alias": {
-			"dev-master": "1.0.x-dev"
+			"dev-master": "2.0.x-dev"
 		}
 	}
 }
