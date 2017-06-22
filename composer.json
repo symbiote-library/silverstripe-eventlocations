@@ -18,7 +18,7 @@
 		"silverstripe/cms": "^3.1",
 		"silverstripe/framework": "^3.1",
 		"unclecheese/eventcalendar": "~1.0",
-		"silverstripe-australia/addressable": "~1.0",
+		"symbiote/silverstripe-addressable": "~1.0",
 		"sheadawson/quickaddnew": "~1.1"
 	},
 	"extra": {
