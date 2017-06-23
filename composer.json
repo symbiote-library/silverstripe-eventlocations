@@ -8,11 +8,11 @@
 		"location",
 		"calendar"
 	],
-	"homepage": "https://github.com/silverstripe-australia/silverstripe-eventlocations",
+	"homepage": "https://github.com/symbiote/silverstripe-eventlocations",
 	"license": "BSD-3-Clause",
 	"authors": [{
 		"name": "Andrew Short",
-		"email": "ajshort@silverstripe.com.au"
+		"email": "ajshort@symbiote.com.au"
 	}],
 	"require": {
 		"silverstripe/cms": "^3.1",
