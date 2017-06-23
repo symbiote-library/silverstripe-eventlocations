@@ -8,7 +8,7 @@
 		"location",
 		"calendar"
 	],
-	"homepage": "https://github.com/symbiote/silverstripe-eventlocations",
+	"homepage": "https://github.com/symbiote-library/silverstripe-eventlocations",
 	"license": "BSD-3-Clause",
 	"authors": [{
 		"name": "Andrew Short",
