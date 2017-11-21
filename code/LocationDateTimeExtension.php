@@ -13,7 +13,7 @@ class LocationDateTimeExtension extends DataExtension {
 	public function updateCMSFields(FieldList $fields) {
 		
 		$locations = function(){
-			return EventLocation::get()->map()->toArray();
+			return EventLocation::get()->where('"EventLocation"."Title" IS NOT NULL')->map()->toArray();
 		};
 
 		$dropdown = DropdownField::create(
